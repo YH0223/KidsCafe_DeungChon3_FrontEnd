@@ -45,7 +45,7 @@ export function useInquiryDetail(id: string | undefined) {
         setIsLoading(true)
         setError(null)
         
-        const response = await customFetch(`http://localhost:8080/api/inquiries/${id}`)
+        const response = await customFetch(`/api/inquiries/${id}`)
         
         if (!response.ok) {
           if (response.status === 404) throw new Error("존재하지 않는 문의사항입니다.")
@@ -82,7 +82,7 @@ export function useInquiryDetail(id: string | undefined) {
     }
 
     try {
-      const response = await customFetch(`http://localhost:8080/api/inquiries/${id}/verify`, {
+      const response = await customFetch(`/api/inquiries/${id}/verify`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password })
@@ -97,7 +97,7 @@ export function useInquiryDetail(id: string | undefined) {
 
         if (modalAction === "delete") {
           if (confirm("정말 이 문의글을 삭제하시겠습니까?")) {
-            const deleteResponse = await customFetch(`http://localhost:8080/api/inquiries/${id}?password=${encodeURIComponent(password)}`, {
+            const deleteResponse = await customFetch(`/api/inquiries/${id}?password=${encodeURIComponent(password)}`, {
               method: "DELETE"
             })
             if (deleteResponse.ok) {
@@ -127,7 +127,7 @@ export function useInquiryDetail(id: string | undefined) {
     try {
       // @PutMapping("/{id}")에 RequestParam인 password와 RequestBody 데이터를 실어 보냅니다.
       const response = await customFetch(
-        `http://localhost:8080/api/inquiries/${id}?password=${encodeURIComponent(password)}`,
+        `/api/inquiries/${id}?password=${encodeURIComponent(password)}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

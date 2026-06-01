@@ -42,7 +42,7 @@ export function useReservationEdit() {
       setIsLoading(true)
       setError(null)
 
-      const response = await customFetch("http://localhost:8080/api/reservations/auth", {
+      const response = await customFetch("/api/reservations/auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: authName, phone: authPhone })
@@ -76,7 +76,7 @@ export function useReservationEdit() {
 
     try {
       setIsLoading(true)
-      const response = await customFetch(`http://localhost:8080/api/reservations/${reservation.id}`, {
+      const response = await customFetch(`/api/reservations/${reservation.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
