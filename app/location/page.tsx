@@ -106,7 +106,8 @@ export default function LocationPage() {
             </div>
           </div>
 
-          {/* Transportation */}
+
+          {/* Transportation (교통 정보) */}
           <div className="space-y-4">
             {/* Subway */}
             <div className="rounded-2xl bg-card p-6 shadow-md">
@@ -116,18 +117,20 @@ export default function LocationPage() {
                 </div>
                 <h3 className="text-lg font-bold text-foreground">지하철</h3>
               </div>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
-                  <span className="mt-0.5 rounded bg-green-500 px-2 py-0.5 text-xs font-semibold text-white">2호선</span>
-                  <span>강남역 3번 출구에서 도보 5분</span>
+                  <span className="mt-0.5 rounded bg-[#CDA84B] px-2 py-0.5 text-xs font-semibold text-white shrink-0">9호선</span>
+                  <div>
+                    <span className="font-semibold text-foreground">가양역 8번 출구</span>
+                    <p className="text-sm mt-0.5">출구에서 도보로 약 8분 거리 (약 547m)</p>
+                  </div>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-0.5 rounded bg-orange-500 px-2 py-0.5 text-xs font-semibold text-white">9호선</span>
-                  <span>신논현역 1번 출구에서 도보 7분</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-0.5 rounded bg-yellow-500 px-2 py-0.5 text-xs font-semibold text-foreground">분당선</span>
-                  <span>선릉역 10번 출구에서 도보 10분</span>
+                  <span className="mt-0.5 rounded bg-[#CDA84B] px-2 py-0.5 text-xs font-semibold text-white shrink-0">9호선</span>
+                  <div>
+                    <span className="font-semibold text-foreground">등촌역 3번 출구</span>
+                    <p className="text-sm mt-0.5">출구 앞 버스 환승 시 약 7분 소요</p>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -140,14 +143,27 @@ export default function LocationPage() {
                 </div>
                 <h3 className="text-lg font-bold text-foreground">버스</h3>
               </div>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul className="space-y-4 text-muted-foreground">
                 <li className="flex items-start gap-2">
-                  <span className="mt-0.5 rounded bg-blue-500 px-2 py-0.5 text-xs font-semibold text-white">간선</span>
-                  <span>140, 144, 145, 340, 420 (강남역 정류장 하차)</span>
+                  <span className="mt-0.5 rounded bg-emerald-500 px-2 py-0.5 text-xs font-semibold text-white shrink-0">가양역 출발</span>
+                  <div>
+                    <p className="text-sm font-medium text-foreground">8번 출구 앞 정류장 탑승 ➡️ 1정거장 이동</p>
+                    <p className="text-sm mt-1">
+                      <span className="font-semibold text-primary">[하차 정류장]</span> 경복비즈니스고등학교
+                    </p>
+                    <p className="text-xs mt-1 bg-muted p-2 rounded">
+                      <span className="font-semibold text-foreground">버스 노선:</span> 강서05, 6645, 6627, 652, 673
+                    </p>
+                  </div>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-0.5 rounded bg-green-500 px-2 py-0.5 text-xs font-semibold text-white">지선</span>
-                  <span>3412, 4412 (테헤란로 정류장 하차)</span>
+                  <span className="mt-0.5 rounded bg-blue-500 px-2 py-0.5 text-xs font-semibold text-white shrink-0">등촌역 출발</span>
+                  <div>
+                    <p className="text-sm font-medium text-foreground">3번 출구 앞 정류장 탑승 ➡️ 버스로 7분 이동</p>
+                    <p className="text-xs mt-1 bg-muted p-2 rounded">
+                      <span className="font-semibold text-foreground">버스 노선:</span> 601, 605
+                    </p>
+                  </div>
                 </li>
               </ul>
             </div>
