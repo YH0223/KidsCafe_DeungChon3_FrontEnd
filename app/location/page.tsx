@@ -74,37 +74,7 @@ export default function LocationPage() {
             </div>
           </div>
 
-          {/* Location Info */}
-          <div className="mb-8 rounded-2xl bg-card p-6 shadow-md">
-            <h2 className="mb-4 text-xl font-bold text-foreground">기본 정보</h2>
-            <div className="grid gap-4 sm:grid-cols-3">
-              <div className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-5 w-5 text-primary" />
-                <div>
-                  <p className="font-medium text-foreground">주소</p>
-                  <p className="text-sm text-muted-foreground">
-                    서울특별시 강서구 화곡로63길 19<br />경향교회 교육관 1층
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Phone className="mt-0.5 h-5 w-5 text-primary" />
-                <div>
-                  <p className="font-medium text-foreground">전화번호</p>
-                  <p className="text-sm text-muted-foreground">02-1234-5678</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Clock className="mt-0.5 h-5 w-5 text-primary" />
-                <div>
-                  <p className="font-medium text-foreground">운영시간</p>
-                  <p className="text-sm text-muted-foreground">
-                    평일 10:00 - 20:00<br />주말 09:00 - 21:00
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        
 
 
           {/* Transportation (교통 정보) */}
