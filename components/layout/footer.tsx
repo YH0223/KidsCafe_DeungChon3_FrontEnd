@@ -50,7 +50,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="transition-colors hover:text-background">
+                <Link href="/inquiry" className="transition-colors hover:text-background">
                   문의하기
                 </Link>
               </li>
